@@ -19,7 +19,7 @@ export default defineConfig({
     }, {})
   },
   optimizeDeps: {
-    include: [ 'redux' ]
+    include: [ 'redux', 'react', 'react-dom' ]
   },
   plugins: [ 
     vuePlugin(),
