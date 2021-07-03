@@ -3,7 +3,7 @@
   const path = require('path')
 
   const tsconfig = require('../tsconfig.json')
-  const pkg = require('../package.json')
+  const pkg = require('../../package.json')
 
   const pkgFolder = (name) => 
   `../.cache/${name.replace('@', '').replace('/', '-')}`
