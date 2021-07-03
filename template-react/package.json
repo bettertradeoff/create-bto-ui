@@ -1,0 +1,39 @@
+{
+  "name": "create-bto-ui",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vite",
+    "preinstall": "node ./tools/unlink.js && node ./tools/preinstall.js && yarn --cwd ../.cache install",
+    "postinstall": "node ./tools/postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btoaelbore/create-bto-ui.git"
+  },
+  "keywords": [],
+  "author": "BetterTradeOff <dev@bettertradoff.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/btoaelbore/create-bto-ui/issues"
+  },
+  "homepage": "https://github.com/btoaelbore/create-bto-ui#readme",
+  "devDependencies": {
+    "@rollup/plugin-replace": "^2.4.2",
+    "@types/node": "^15.14.0",
+    "@types/react": "^17.0.13",
+    "@types/react-dom": "^17.0.8",
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vitejs/plugin-react-refresh": "^1.3.4",
+    "@vue/compiler-sfc": "^3.1.3",
+    "aria-build": "^0.7.4",
+    "aria-fs": "^0.7.3",
+    "rollup-plugin-ts-paths-resolve": "^1.4.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5",
+    "vue": "^3.1.3"
+  }
+}

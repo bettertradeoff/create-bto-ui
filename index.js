@@ -14,10 +14,11 @@ async function init() {
 
   console.log(`Scaffolding project in ${root}...`)
 
-  const files = await globFiles(path.join('template', '**/*'), { root: __dirname })
+  const templateDir  = `template-${argv.t || argv.template || 'vue'}`
+  const files = await globFiles(path.join(templateDir , '**/*'), { root: __dirname })
 
   for (const file of files) {
-    const tempPath = file.replace(path.join(__dirname, 'template'), '')
+    const tempPath = file.replace(path.join(__dirname, templateDir ), '')
     const destPath = path.join(root, tempPath)
     await fs.mkdir(path.dirname(destPath), { recursive: true })
     await fs.copyFile(file, destPath)
